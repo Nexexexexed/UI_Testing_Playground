@@ -1,0 +1,64 @@
+.app {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background: #2c3e50;
+  color: white;
+  padding: 1rem 2rem;
+  border-bottom: 3px solid #3498db;
+}
+
+.header h1 {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #34495e;
+  color: white;
+  padding: 1rem;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.sidebar h3 {
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 0.5rem;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #3498db;
+}
+
+.main-content {
+  grid-area: main;
+  padding: 2rem;
+  background: #ecf0f1;
+  overflow-y: auto;
+}
