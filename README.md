@@ -1,73 +1,64 @@
-# React + TypeScript + Vite
+# Площадка для тестирования UI 🧪
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-18.2.0-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Currently, two official plugins are available:
+Русскоязычная платформа для практики автоматизации тестирования пользовательского интерфейса. Содержит коллекцию реалистичных сценариев для отработки навыков тестирования.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Возможности
 
-## React Compiler
+- **5+ практических примеров** различных UI-сценариев
+- **Примеры кода** для популярных фреймворков тестирования
+- **Русскоязычный интерфейс** с подробными описаниями
+- **Интерактивные демо** для непосредственного тестирования
+- **Группировка по категориям** и уровням сложности
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 📋 Примеры тестирования
 
-## Expanding the ESLint configuration
+### 🔄 Динамический контент
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Динамический ID** - элементы с изменяющимися идентификаторами
+- **Видимость элемента** - элементы, появляющиеся после задержки
+- **AJAX данные** - асинхронная загрузка контента
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 👆 Пользовательское взаимодействие
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Счетчик кликов** - тестирование пользовательских действий
+- **Наведение курсора** - обработка hover-событий
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### ⏱️ Асинхронные операции
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Загрузка данных** - работа с AJAX-запросами
+- **Таймауты** - элементы с задержкой появления
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🛠️ Технологии
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **Frontend**: React 18 + TypeScript
+- **Роутинг**: React Router DOM
+- **Стили**: CSS3 с Grid и Flexbox
+- **Сборка**: Create React App / Vite
+
+## 🏁 Быстрый старт
+
+### Предварительные требования
+
+- Node.js 16+
+- npm или yarn
+
+### Установка и запуск
+
+```bash
+# Клонирование репозитория
+git clone <repository-url>
+cd ui-testing-playground
+
+# Установка зависимостей
+npm install
+
+# Запуск в режиме разработки
+npm start
+
+# Или сборка для production
+npm run build
 ```
