@@ -22,6 +22,12 @@ const Sidebar: React.FC = () => {
           </li>
         ))}
       </ul>
+      <h3>Веб сайт</h3>
+      <ul>
+        <li>
+          <Link to={`/website`}>Тестовый сайт</Link>
+        </li>
+      </ul>
     </nav>
   );
 };
